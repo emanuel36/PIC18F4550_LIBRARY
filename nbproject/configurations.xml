@@ -6,6 +6,7 @@
                    projectFiles="true">
       <itemPath>inc/tmr0Interrupt.h</itemPath>
       <itemPath>inc/lcd16x2.h</itemPath>
+      <itemPath>inc/main.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

@@ -1,10 +1,3 @@
-/* 
- * File:   lcd16x2.h
- * Author: emanuel
- *
- * Created on 31 de Maio de 2017, 16:35
- */
-
 #ifndef LCD16X2_H
 #define	LCD16X2_H
     
