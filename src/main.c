@@ -70,17 +70,16 @@
 #include <time.h>
 #include <string.h>
 #include <pic18f4550.h>
-//#include "lcd16x2.h"
+#include "../inc/lcd16x2.h"
 #include "../inc/tmr0Interrupt.h"
 
 #define _XTAL_FREQ  8000000
 
 int main(){
-    /*initLCD();
+    initLCD();
     writeLCD("PIC18F4550");
     selectLine(2, 0);
     writeLCD("QUIXADA");
-    */
     
     TRISD = 0;
     PORTD = 0;
