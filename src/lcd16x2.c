@@ -7,8 +7,7 @@
 #define _XTAL_FREQ 8000000
 
 void enableLCD(){
-    PORTEbits.RE1 = 1;
-    __delay_ms(10);
+    PORTEbits.RE1 = 1; 
     PORTEbits.RE1 = 0;
 }
 
@@ -51,11 +50,11 @@ void clear_lcd(){
 void initLCD(){
     TRISD = 0x0;
     TRISE = TRISE & 0b11111001;
-    sendCMD(0x01);    
-    sendCMD(0x38);
-    sendCMD(0x80);    
-    sendCMD(0xf);
-    sendCMD(0x01);
+    sendCMD(0x80);
+    sendCMD(0x30);
+    sendCMD(0x38);    
+    sendCMD(0xF);
+    clear_lcd();
 }
 
 void waitPassLCD(){
