@@ -2,11 +2,7 @@
 #include <stdlib.h>
 #include <xc.h>
 #include <pic18f4550.h>
-#define _XTAL_FREQ 8000000
-
-void reset_interrupt(){
-    INTCON = 0x0;
-}
+#include "../inc/main.h"
 
 void config_tmr0(){
     INTCONbits.PEIE_GIEL = 1;
@@ -47,17 +43,16 @@ void config_int2(){
 void interrupt ISR(){
     if(INTCONbits.INT0IF){      //Botão 1 pressionado
         INTCONbits.INT0IF = 0;
-        //button_1();
-        PORTDbits.RD1 = !PORTDbits.RD1;
+        interrupt_flag = interrupt_flag | INT0;
     }
     
     if(INTCON3bits.INT1IF){     //Botão 2 pressionado    
         INTCON3bits.INT1IF = 0;
-        //button_2();
+        interrupt_flag = interrupt_flag | INT1;
     }
     
     if(INTCON3bits.INT2IF){     //Botão 3 pressionado
         INTCON3bits.INT2F = 0; 
-        //button_3();
+        interrupt_flag = interrupt_flag | INT2;
     } 
 }
