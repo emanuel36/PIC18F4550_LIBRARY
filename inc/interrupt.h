@@ -6,6 +6,8 @@
 #define _XTAL_FREQ 16000000
 
 void config_tmr0();
+void config_int0();
+void config_int1();
 void config_int2();
 
 #endif	/* INTERRUPT_H */

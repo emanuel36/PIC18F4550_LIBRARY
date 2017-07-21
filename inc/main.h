@@ -1,13 +1,8 @@
 #ifndef MAIN_H
 #define	MAIN_H
-    
-
 
 // PIC18F4550 Configuration Bit Settings
 
-// 'C' source line config statements
-
-// CONFIG1L
 #pragma config PLLDIV = 1       // PLL Prescaler Selection bits (No prescale (4 MHz oscillator input drives PLL directly))
 #pragma config CPUDIV = OSC1_PLL2// System Clock Postscaler Selection bits ([Primary Oscillator Src: /1][96 MHz PLL Src: /2])
 #pragma config USBDIV = 1       // USB Clock Selection bit (used in Full-Speed USB mode only; UCFG:FSEN = 1) (USB clock source comes directly from the primary oscillator block with no postscale)
@@ -74,8 +69,7 @@
 
 #define _XTAL_FREQ  8000000
 
-int senha;
-char interrupt_flag = 0;
+char interrupt_flag;
 
 #define INT0 0b1
 #define INT1 0b10
