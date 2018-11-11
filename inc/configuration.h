@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define	MAIN_H
+#ifndef CONFIGURATION_H
+#define	CONFIGURATION_H
 
 // PIC18F4550 Configuration Bit Settings
 
@@ -26,7 +26,7 @@
 #pragma config CCP2MX = ON      // CCP2 MUX bit (CCP2 input/output is multiplexed with RC1)
 #pragma config PBADEN = OFF      // PORTB A/D Enable bit (PORTB<4:0> pins are configured as analog input channels on Reset)
 #pragma config LPT1OSC = OFF    // Low-Power Timer 1 Oscillator Enable bit (Timer1 configured for higher power operation)
-#pragma config MCLRE = ON       // MCLR Pin Enable bit (MCLR pin enabled; RE3 input pin disabled)
+#pragma config MCLRE = OFF       // MCLR Pin Enable bit (MCLR pin enabled; RE3 input pin disabled)
 
 // CONFIG4L
 #pragma config STVREN = ON      // Stack Full/Underflow Reset Enable bit (Stack full/underflow will cause Reset)
@@ -71,8 +71,4 @@
 
 char interrupt_flag;
 
-#define INT0 0b1
-#define INT1 0b10
-#define INT2 0b100
-
-#endif	/* MAIN_H */
+#endif	/* CONFIGURATION_H */
