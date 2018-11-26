@@ -78,13 +78,11 @@ void interrupt ISR(){
     if(INTCONbits.INT0IF){      
         INTCONbits.INT0IF = 0;
         interrupt_flag = interrupt_flag | INT0_FLAG;
-        DutyPWM1 += 0.1;
     }
     
     if(INTCON3bits.INT1IF){      
         INTCON3bits.INT1IF = 0;
         interrupt_flag = interrupt_flag | INT1_FLAG;
-        DutyPWM1 -= 0.1;
     }
     
     if(INTCON3bits.INT2IF){   

@@ -35,4 +35,4 @@ void USART_SendString(const char *out){
 }
 
 #endif	/* USART_H */
-
+#endif	/* USART_H */
